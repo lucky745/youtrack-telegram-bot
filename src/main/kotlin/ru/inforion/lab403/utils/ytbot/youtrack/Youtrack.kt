@@ -42,7 +42,7 @@ class Youtrack(val baseUrl: String, private val permToken: String) {
          */
         private fun markdownUrl(url: String, inlineString: String = ARROW_CHAR): String = "\\[[$inlineString]($url)]"
 
-        private val timedateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").apply {
+        private val timedateFormat = SimpleDateFormat("yyyy-MM-dd'_'HH:mm:ss").apply {
             timeZone = TimeZone.getTimeZone("UTC")
         }
 
